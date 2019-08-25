@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ncku.edu.tw.kr_chatappication.Adapter.MainAdapter;
+import ncku.edu.tw.kr_chatappication.ItemView.CircleOfFriendsItem;
 import ncku.edu.tw.kr_chatappication.ItemView.FriendChatItem;
 import ncku.edu.tw.kr_chatappication.ItemView.SearchViewItem;
 import ncku.edu.tw.kr_chatappication.ItemView.ViewType;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     List<ViewType> viewList;
     SearchViewItem searchView;
     FriendChatItem friendChat;
+    CircleOfFriendsItem circleOfFriendsItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +39,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void setListView() {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        viewList = new ArrayList<>();
-        mainAdapter = new MainAdapter(this, viewList);
+        mainAdapter = new MainAdapter(this);
         recyclerView.setAdapter(mainAdapter);
     }
 
     public void addView() {
         searchView = new SearchViewItem();
         friendChat = new FriendChatItem();
+        circleOfFriendsItem = new CircleOfFriendsItem();
 
-        mainAdapter.addItem(friendChat);
         mainAdapter.addItem(searchView);
+        mainAdapter.addItem(circleOfFriendsItem);
+        mainAdapter.addItem(friendChat);
     }
 }
