@@ -42,10 +42,10 @@ public class FriendChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
         if (getItemViewType(position) == TYPE_SELF) {
             FriendChatData friendChatData = (FriendChatData) chatList.get(position);
-            bindToSelf(friendChatData);
+            ((FriendChatSelfViewHolder) viewHolder).bindToSelf(friendChatData);
         } else if (getItemViewType(position) == TYPE_OTHER_SIDE) {
             FriendChatData friendChatData = (FriendChatData) chatList.get(position);
-            bindToOtherSide(friendChatData);
+            ((FriendChatOtherSelfViewHolder) viewHolder).bindToOtherSide(friendChatData);
         }
     }
 
@@ -54,6 +54,10 @@ public class FriendChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         public FriendChatSelfViewHolder(@NonNull View itemView) {
             super(itemView);
         }
+
+        public void bindToSelf(FriendChatData friendChatData) {
+
+        }
     }
 
     class FriendChatOtherSelfViewHolder extends RecyclerView.ViewHolder {
@@ -61,15 +65,12 @@ public class FriendChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         public FriendChatOtherSelfViewHolder(@NonNull View itemView) {
             super(itemView);
         }
+
+        public void bindToOtherSide(FriendChatData friendChatData) {
+
+        }
     }
 
-    public void bindToSelf(FriendChatData friendChatData) {
-
-    }
-
-    public void bindToOtherSide(FriendChatData friendChatData) {
-
-    }
 
     @Override
     public int getItemCount() {
@@ -77,7 +78,7 @@ public class FriendChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     public void addItem(FriendChatData friendChatData) {
-        chatList.add(friendChatData);
+        chatList.add(0, friendChatData);
         notifyDataSetChanged();
     }
 

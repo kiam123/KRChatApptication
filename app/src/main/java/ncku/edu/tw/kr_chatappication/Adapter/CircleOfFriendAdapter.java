@@ -34,12 +34,10 @@ public class CircleOfFriendAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
         FriendListData friendChatData = (FriendListData) list.get(position);
-        bindToFriendChatData(friendChatData);
+        ((FriendChatViewHolder) viewHolder).bindToFriendChatData(friendChatData);
     }
 
-    public void bindToFriendChatData(FriendListData friendChatData) {
 
-    }
 
     public void addItem(FriendListData friendChatData) {
         list.add(friendChatData);
@@ -56,6 +54,10 @@ public class CircleOfFriendAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         public FriendChatViewHolder(@NonNull View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
+        }
+
+        public void bindToFriendChatData(FriendListData friendChatData) {
+
         }
 
         @Override

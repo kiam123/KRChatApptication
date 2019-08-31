@@ -32,13 +32,10 @@ public class FriendListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
-        FriendListData friendChatData = (FriendListData)list.get(position);
-        bindToFriendChatData(friendChatData);
+        FriendListData friendChatData = (FriendListData) list.get(position);
+        ((FriendChatViewHolder) viewHolder).bindToFriendChatData(friendChatData);
     }
 
-    public void bindToFriendChatData(FriendListData friendChatData) {
-
-    }
 
     public void addItem(FriendListData friendChatData) {
         list.add(friendChatData);
@@ -63,8 +60,13 @@ public class FriendListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
             Intent intent = new Intent();
             intent.setClass(mContext, FriendChatActivity.class);
-            intent.putExtra("position",""+getLayoutPosition());
+            intent.putExtra("position", "" + getLayoutPosition());
             mContext.startActivity(intent);
         }
+
+        public void bindToFriendChatData(FriendListData friendChatData) {
+
+        }
+
     }
 }
