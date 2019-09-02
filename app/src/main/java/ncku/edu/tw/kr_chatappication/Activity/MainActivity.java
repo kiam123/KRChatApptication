@@ -22,7 +22,6 @@ import ncku.edu.tw.kr_chatappication.R;
 public class MainActivity extends AppCompatActivity {
     MainAdapter mainAdapter;
     RecyclerView recyclerView;
-    List<ViewType> viewTypeList;
     SearchViewItem searchView;
     FriendChatItem friendChat;
     CircleOfFriendsItem circleOfFriendsItem;

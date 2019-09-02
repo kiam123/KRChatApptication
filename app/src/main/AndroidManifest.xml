@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Activity.SearchActivity"></activity>
+        <activity
+            android:name=".Activity.SearchActivity"
+            android:windowSoftInputMode="stateAlwaysVisible"/>
         <activity android:name=".Activity.AddFriendListActivity" />
         <activity android:name=".Activity.FriendChatActivity" />
         <activity android:name=".Activity.MainActivity">

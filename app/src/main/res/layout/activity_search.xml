@@ -21,17 +21,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="搜尋"
-                android:textSize="20dp"
-                android:layout_marginStart="12dp"
+                android:background="@null"
+                android:ems="10"
+                android:hint="搜尋"
+                android:inputType="textPersonName"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/layoutWithCircleDrawable"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
         </android.support.constraint.ConstraintLayout>
 
     </android.support.v7.widget.Toolbar>

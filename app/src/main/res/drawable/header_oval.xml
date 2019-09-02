@@ -6,9 +6,9 @@
         android:radius="80dip"/>
     <solid
         android:color="#ff4CAF50" />
-    <stroke
-        android:width="2dip"
-        android:color="#FFF" />
+<!--    <stroke-->
+<!--        android:width="2dip"-->
+<!--        android:color="#FFF" />-->
     <padding
         android:left="6dip"
         android:right="6dip"
