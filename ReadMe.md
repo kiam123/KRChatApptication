@@ -72,7 +72,10 @@
     - 使用者可以 查詢 是否為好友以及在線状况
 
 ## 資料庫
-![photo/Database-architecture-diagram](photo/Database-architecture-diagram.jpg)
+1. 資料庫(ER Diagram)
+![photo/Database-architecture-diagram](photo/Database-architecture-diagram.jpg)  
+
+2. 
 
 ## 架構圖
 
