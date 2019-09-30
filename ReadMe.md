@@ -75,7 +75,7 @@
 1. 資料庫(ER Diagram)
 ![photo/Database-architecture-diagram](photo/Database-architecture-diagram.jpg)  
 
-2. 
+2. 資料庫(Schema)
 
 ## 架構圖
 
