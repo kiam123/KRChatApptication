@@ -72,7 +72,7 @@
     - 使用者可以 查詢 是否為好友以及在線状况
 
 ## 資料庫
-
+![photo/Database-architecture-diagram.jpg.jpg](screenshot.jpg)
 
 ## 架構圖
 
