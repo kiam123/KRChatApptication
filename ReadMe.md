@@ -73,10 +73,10 @@
 
 ## 資料庫
 1. 資料庫(ER Diagram)
-![Database-architecture-diagram](photo/Database-architecture-diagram.jpg)  
+![Database-ER-Diagram](photo/Database-ER-Diagram.jpg)  
 
 2. 資料庫(Schema)
-
+![Database-Schema-Diagram](photo/Database-Schema-Diagram.jpg)  
 
 ## 架構圖
 
