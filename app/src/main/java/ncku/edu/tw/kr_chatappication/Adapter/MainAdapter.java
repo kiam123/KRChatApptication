@@ -3,7 +3,6 @@ package ncku.edu.tw.kr_chatappication.Adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,8 +13,9 @@ import android.widget.Button;
 import java.util.ArrayList;
 import java.util.List;
 
+import ncku.edu.tw.kr_chatappication.Activity.FriendChatActivity;
 import ncku.edu.tw.kr_chatappication.Activity.SearchActivity;
-import ncku.edu.tw.kr_chatappication.Data.FriendListData;
+import ncku.edu.tw.kr_chatappication.Data.CircleOfFriendListData;
 import ncku.edu.tw.kr_chatappication.ItemView.CircleOfFriendsItem;
 import ncku.edu.tw.kr_chatappication.ItemView.FriendChatItem;
 import ncku.edu.tw.kr_chatappication.ItemView.SearchViewItem;
@@ -112,7 +112,7 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     class CircleOfFriendsViewHolder extends RecyclerView.ViewHolder {
-        ViewPager viewpager;
+//        ViewPager viewpager;
         RecyclerView recyclerView;
 
         public CircleOfFriendsViewHolder(@NonNull android.view.View itemView) {
@@ -124,15 +124,21 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             CircleOfFriendAdapter circleOfFriendAdapter = new CircleOfFriendAdapter(mContext);
             recyclerView.setAdapter(circleOfFriendAdapter);
 
-            circleOfFriendAdapter.addItem(new FriendListData());
-            circleOfFriendAdapter.addItem(new FriendListData());
-            circleOfFriendAdapter.addItem(new FriendListData());
-            circleOfFriendAdapter.addItem(new FriendListData());
-            circleOfFriendAdapter.addItem(new FriendListData());
-            circleOfFriendAdapter.addItem(new FriendListData());
-            circleOfFriendAdapter.addItem(new FriendListData());
-            circleOfFriendAdapter.addItem(new FriendListData());
-            circleOfFriendAdapter.addItem(new FriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
+            circleOfFriendAdapter.addItem(new CircleOfFriendListData());
         }
 
         public void bindToCircleOfFriendsItem(CircleOfFriendsItem friendChat) {
@@ -140,27 +146,25 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
     }
 
-    class FriendChatViewHolder extends RecyclerView.ViewHolder {
-        RecyclerView recyclerView;
+    class FriendChatViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public FriendChatViewHolder(@NonNull android.view.View itemView) {
             super(itemView);
-            recyclerView = (RecyclerView) itemView.findViewById(R.id.recycler_view);
-            recyclerView.setLayoutManager(new LinearLayoutManager(mContext));
+            itemView.setOnClickListener(this);
 
-            FriendListAdapter friendListAdapter = new FriendListAdapter(mContext);
-            recyclerView.setAdapter(friendListAdapter);
-
-            friendListAdapter.addItem(new FriendListData());
-            friendListAdapter.addItem(new FriendListData());
-            friendListAdapter.addItem(new FriendListData());
-            friendListAdapter.addItem(new FriendListData());
-            friendListAdapter.addItem(new FriendListData());
-            friendListAdapter.addItem(new FriendListData());
         }
 
         public void bindToFriendChatItem(FriendChatItem friendChat) {
 
+        }
+
+        @Override
+        public void onClick(View view) {
+
+            Intent intent = new Intent();
+            intent.setClass(mContext, FriendChatActivity.class);
+            intent.putExtra("position", "" + getLayoutPosition());
+            mContext.startActivity(intent);
         }
     }
 

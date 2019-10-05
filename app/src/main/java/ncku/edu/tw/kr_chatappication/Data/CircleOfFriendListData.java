@@ -1,4 +1,4 @@
 package ncku.edu.tw.kr_chatappication.Data;
 
-public class FriendListData {
+public class CircleOfFriendListData {
 }

@@ -22,6 +22,7 @@ public class FriendChatActivity extends AppCompatActivity {
     Toolbar toolbar;
     EditText edtReply;
     FriendChatAdapter friendChatAdapter;
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,25 +38,25 @@ public class FriendChatActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(friendChatAdapter);
-        friendChatAdapter.addItem(new FriendChatData(1));
-        friendChatAdapter.addItem(new FriendChatData(1));
-        friendChatAdapter.addItem(new FriendChatData(2));
-        friendChatAdapter.addItem(new FriendChatData(2));
-        friendChatAdapter.addItem(new FriendChatData(2));
-        friendChatAdapter.addItem(new FriendChatData(1));
-        friendChatAdapter.addItem(new FriendChatData(1));
-        friendChatAdapter.addItem(new FriendChatData(1));
-        friendChatAdapter.addItem(new FriendChatData(1));
-        friendChatAdapter.addItem(new FriendChatData(2));
-        friendChatAdapter.addItem(new FriendChatData(2));
-        friendChatAdapter.addItem(new FriendChatData(2));
-        friendChatAdapter.addItem(new FriendChatData(1));
-        friendChatAdapter.addItem(new FriendChatData(1));
-        friendChatAdapter.addItem(new FriendChatData(1));
-        friendChatAdapter.addItem(new FriendChatData(1));
-        friendChatAdapter.addItem(new FriendChatData(2));
-        friendChatAdapter.addItem(new FriendChatData(2));
-        friendChatAdapter.addItem(new FriendChatData(2));
+        friendChatAdapter.addItem(new FriendChatData(1,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(1,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(2,"asd"));
+        friendChatAdapter.addItem(new FriendChatData(2,"AAsdasd"));
+        friendChatAdapter.addItem(new FriendChatData(2,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(1,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(1,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(1,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(1,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(2,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(2,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(2,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(1,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(1,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(1,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(1,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(2,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(2,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(2,"你AVVSD好"));
 
 //        Intent intent = getIntent();
 //        String ac = intent.getStringExtra("position");
@@ -75,8 +76,8 @@ public class FriendChatActivity extends AppCompatActivity {
 
     public void onSendClick(View view) {
         Toast.makeText(getApplicationContext(),"1",Toast.LENGTH_SHORT).show();
-        friendChatAdapter.addItem(new FriendChatData(1));
-        friendChatAdapter.addItem(new FriendChatData(2));
+        friendChatAdapter.addItem(new FriendChatData(1,"你好"));
+        friendChatAdapter.addItem(new FriendChatData(2,"你好"));
     }
 
     @Override

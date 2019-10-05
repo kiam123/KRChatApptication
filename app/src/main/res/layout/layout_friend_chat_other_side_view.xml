@@ -19,14 +19,14 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             app:srcCompat="@drawable/ic_launcher" />
 
     </FrameLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -37,9 +37,11 @@
         android:paddingTop="5dp"
         android:paddingRight="5dp"
         android:paddingBottom="5dp"
+        android:textAllCaps="false"
         android:text="ButtonButtonButtonButtonButtonButtonButtonButtonButtonButtonButtonButtonButtonButtonButtonButtonButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/layoutWithCircleDrawable"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+<!--    android:textAllCaps="false" 設定button不會轉換成大寫-->
 </android.support.constraint.ConstraintLayout>

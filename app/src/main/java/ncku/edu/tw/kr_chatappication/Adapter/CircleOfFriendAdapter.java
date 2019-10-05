@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import ncku.edu.tw.kr_chatappication.Activity.FriendChatActivity;
-import ncku.edu.tw.kr_chatappication.Data.FriendListData;
+import ncku.edu.tw.kr_chatappication.Data.CircleOfFriendListData;
 import ncku.edu.tw.kr_chatappication.R;
 
 
@@ -21,7 +21,7 @@ public class CircleOfFriendAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
     public CircleOfFriendAdapter(Context mContext) {
         this.mContext = mContext;
-        this.list = new ArrayList<FriendListData>();
+        this.list = new ArrayList<CircleOfFriendListData>();
     }
 
     @NonNull
@@ -33,13 +33,13 @@ public class CircleOfFriendAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
-        FriendListData friendChatData = (FriendListData) list.get(position);
+        CircleOfFriendListData friendChatData = (CircleOfFriendListData) list.get(position);
         ((FriendChatViewHolder) viewHolder).bindToFriendChatData(friendChatData);
     }
 
 
 
-    public void addItem(FriendListData friendChatData) {
+    public void addItem(CircleOfFriendListData friendChatData) {
         list.add(friendChatData);
         notifyDataSetChanged();
     }
@@ -56,13 +56,13 @@ public class CircleOfFriendAdapter extends RecyclerView.Adapter<RecyclerView.Vie
             itemView.setOnClickListener(this);
         }
 
-        public void bindToFriendChatData(FriendListData friendChatData) {
+        public void bindToFriendChatData(CircleOfFriendListData friendChatData) {
 
         }
 
         @Override
         public void onClick(View view) {
-            FriendListData tempList = (FriendListData) list.get(getLayoutPosition());
+            CircleOfFriendListData tempList = (CircleOfFriendListData) list.get(getLayoutPosition());
 
             Intent intent = new Intent();
             intent.setClass(mContext, FriendChatActivity.class);

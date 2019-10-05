@@ -51,12 +51,27 @@ public class MainActivity extends AppCompatActivity {
 
     public void addView() {
         searchView = new SearchViewItem();
-        friendChat = new FriendChatItem();
         circleOfFriendsItem = new CircleOfFriendsItem();
+        friendChat = new FriendChatItem();
 
         mainAdapter.addItem(searchView);
         mainAdapter.addItem(circleOfFriendsItem);
-        mainAdapter.addItem(friendChat);
+
+        mainAdapter.addItem(new FriendChatItem());
+        mainAdapter.addItem(new FriendChatItem());
+        mainAdapter.addItem(new FriendChatItem());
+        mainAdapter.addItem(new FriendChatItem());
+        mainAdapter.addItem(new FriendChatItem());
+        mainAdapter.addItem(new FriendChatItem());
+        mainAdapter.addItem(new FriendChatItem());
+        mainAdapter.addItem(new FriendChatItem());
+        mainAdapter.addItem(new FriendChatItem());
+        mainAdapter.addItem(new FriendChatItem());
+        mainAdapter.addItem(new FriendChatItem());
+        mainAdapter.addItem(new FriendChatItem());
+        mainAdapter.addItem(new FriendChatItem());
+//        mainAdapter.addItem(friendChat);
+//        mainAdapter.addItem(friendChat);
     }
 
     public void setToolbar(){

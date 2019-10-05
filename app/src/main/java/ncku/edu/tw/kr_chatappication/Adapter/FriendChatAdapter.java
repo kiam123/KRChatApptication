@@ -6,6 +6,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -50,24 +52,28 @@ public class FriendChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     class FriendChatSelfViewHolder extends RecyclerView.ViewHolder {
-
+        ImageView header;
+        Button btnContent;
         public FriendChatSelfViewHolder(@NonNull View itemView) {
             super(itemView);
+            btnContent = (Button) itemView.findViewById(R.id.btnContent);
         }
 
         public void bindToSelf(FriendChatData friendChatData) {
-
+            btnContent.setText(friendChatData.getContent());
         }
     }
 
     class FriendChatOtherSelfViewHolder extends RecyclerView.ViewHolder {
-
+        ImageView header;
+        Button btnContent;
         public FriendChatOtherSelfViewHolder(@NonNull View itemView) {
             super(itemView);
+            btnContent = (Button) itemView.findViewById(R.id.btnContent);
         }
 
         public void bindToOtherSide(FriendChatData friendChatData) {
-
+            btnContent.setText(friendChatData.getContent());
         }
     }
 
